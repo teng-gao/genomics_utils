@@ -4,6 +4,7 @@ fillID
 ------
 
 fillID.py: given a column of gene names, fills in a column of corresponding ensembl IDs.
+
 Dependencies: biomart, pandas, argparse
 ```
 Usage: python fillID.py <File name> <Column name of gene names> <Column name of gene IDs>
@@ -32,6 +33,7 @@ fillTR
 ------
 
 fillTR.py: given a column of ensemble gene IDs, fills in a column of corresponding cononical transcript IDs.
+
 Dependencies: biomart, pandas, argparse, multiprocessing, collections, re
 ```
 Usage: python fillTR.py <File name> <Column name of gene IDs> <Column name of transcript IDs>
