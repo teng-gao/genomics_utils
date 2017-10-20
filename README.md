@@ -1,11 +1,10 @@
 # genomics_utils
 
-- [sdfasdf  adsf](#genetoid)
-- [Gene Name to ID](#geneToID)
+- [Gene Name to ID](#gene-to-id)
 - [Gene ID to Transcript ID](#IDToTR)
 - [Process TCGA miRNASeq isoform quantifications](#miRNASeq)
 
-## genetoid
+## gene-to-id
 Convert Gene to ID
 
 fillID.py: given a column of gene names, fills in a column of corresponding ensembl IDs.
