@@ -1,10 +1,10 @@
 # genomics_utils
 
 - [Gene Name to ID](#gene-to-id)
-- [Gene ID to Transcript ID](#IDToTR)
-- [Process TCGA miRNASeq isoform quantifications](#miRNASeq)
+- [Gene ID to Transcript ID](#id-to-tr)
+- [Process TCGA miRNASeq isoform quantifications](#mir-seq)
 
-## gene-to-id
+## Gene-to-id
 Convert Gene to ID
 
 fillID.py: given a column of gene names, fills in a column of corresponding ensembl IDs.
@@ -31,7 +31,7 @@ python fillID.py geneTable.tsv Gene_Name Gene_ID
 | HULC       |  ENSG00000251164  |
 | HOTAIR     |  ENSG00000228630    |
 
-## IDToTR
+## Id-to-tr
 Convert ID to Transcript ID
 
 fillTR.py: given a column of ensemble gene IDs, fills in a column of corresponding cononical transcript IDs.
@@ -58,7 +58,7 @@ python fillTR.py geneTable.tsv Gene_ID Transcript_ID
 | ENSG00000228630     |  ENST00000414790    |
 
 
-## miRNASeq
+## Mir-seq
 
 # Process TCGA miRNASeq isoform quantifications
 
