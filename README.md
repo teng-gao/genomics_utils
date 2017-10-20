@@ -34,7 +34,7 @@ python fillID.py geneTable.tsv Gene_Name Gene_ID
 | HULC       |  ENSG00000251164  |
 | HOTAIR     |  ENSG00000228630    |
 
-##ID2TR
+## ID2TR
 
 Gene ID to Transcript ID
 ------------------------
@@ -62,7 +62,7 @@ python fillTR.py geneTable.tsv Gene_ID Transcript_ID
 | ENSG00000251164       |  ENST00000503668  |
 | ENSG00000228630     |  ENST00000414790    |
 
-##miRNASeq
+## miRNASeq
 
 Process TCGA miRNASeq isoform quantifications
 ---------------------------------------------
