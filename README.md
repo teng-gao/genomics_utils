@@ -1,11 +1,10 @@
 # genomics_utils
 
 # Table of Contents
-1. [Gene Name to ID](#gene2ID)
-2. [Gene ID to Transcript ID](#ID2TR)
-3. [Process TCGA miRNASeq isoform quantifications](#miRNASeq)
+- [gene2ID](#gene2ID)
+- [Gene ID to Transcript ID](#ID2TR)
+- [Process TCGA miRNASeq isoform quantifications](#miRNASeq)
 
-## gene2ID
 
 Gene Name to ID
 ---------------
