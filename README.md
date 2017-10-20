@@ -1,13 +1,13 @@
 # genomics_utils
 
-- [sdfasdf  adsf](#Gene2ID)
+- [sdfasdf  adsf](#gene)
 
 # Table of Contents
-- [Gene Name to ID](#gene2ID)
+- [Gene Name to ID](#gene)
 - [Gene ID to Transcript ID](#ID2TR)
 - [Process TCGA miRNASeq isoform quantifications](#miRNASeq)
 
-## Gene2ID
+## gene
 
 ## Gene2ID
 # Convert Gene to ID
