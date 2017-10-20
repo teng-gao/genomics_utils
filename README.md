@@ -1,6 +1,6 @@
 # genomics_utils
 
-- [Heading](#heading)
+- [Heading](#boom)
 
 # Table of Contents
 - [Gene Name to ID](#gene2ID)
@@ -11,8 +11,7 @@
 ## Heading
 
 
-Gene Name to ID
----------------
+## Gene Name to ID
 
 fillID.py: given a column of gene names, fills in a column of corresponding ensembl IDs.
 
