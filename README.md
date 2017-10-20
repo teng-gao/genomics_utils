@@ -54,3 +54,12 @@ python fillTR.py geneTable.tsv Gene_ID Transcript_ID
 | ENSG00000070831      | ENST00000344548 |
 | ENSG00000251164       |  ENST00000503668  |
 | ENSG00000228630     |  ENST00000414790    |
+
+Process TCGA miRNASeq isoform quantifications
+---------------------------------------------
+process_isoform_quantification.py: get mature miRNA sequence expression from a folder of TCGA miRNASeq isoform quantification files (in tsv format).
+
+Dependencies: glob, pandas, argparse, multiprocessing
+```
+Usage: python process_isoform_quantification.py
+```
