@@ -7,11 +7,12 @@
 ## Gene to ID
 
 fillID.py: given a column of gene names, fills in a column of corresponding ensembl IDs.
-
-Dependencies: biomart, pandas, argparse
 ```
 Usage: python fillID.py <File name> <Column name of gene names> <Column name of gene IDs>
 ```
+
+Dependencies: biomart, pandas, argparse
+
 Example: geneTable.tsv
 
 | Gene_Name     | Gene_ID        |
@@ -35,10 +36,12 @@ Convert ID to Transcript ID
 
 fillTR.py: given a column of ensemble gene IDs, fills in a column of corresponding cononical transcript IDs.
 
-Dependencies: biomart, pandas, argparse, multiprocessing, collections, re
 ```
 Usage: python fillTR.py <File name> <Column name of gene IDs> <Column name of transcript IDs>
 ```
+
+Dependencies: biomart, pandas, argparse, multiprocessing, collections, re
+
 Example: geneTable.tsv
 
 | Gene_ID     | Transcript_ID   |
@@ -59,13 +62,14 @@ python fillTR.py geneTable.tsv Gene_ID Transcript_ID
 
 ## Process TCGA miRNASeq isoform quantifications
 
-process_isoform_quantification.py: get mature miRNA sequence expression from a folder of TCGA miRNASeq isoform quantification files (in tsv format).
+process_isoform_quantification.py: get mature miRNA sequence expression from a folder of TCGA miRNASeq isoform quantification files (*mirbase21.isoforms.quantification.txt). Place and run this script in folder containing the TCGA miRNASeq isoform quantification files.
+
+```
+Usage: python process_isoform_quantification.py
+```
 
 Dependencies: glob, pandas, argparse, multiprocessing
-```
-Usage: Place in folder containing the TCGA miRNASeq isoform quantification files (*mirbase21.isoforms.quantification.txt)
-python process_isoform_quantification.py
-```
+
 Example:
 
 |miRNA_ID|isoform_coords|read_count|RPM|cross-mapped|miRNA_region|
