@@ -1,7 +1,7 @@
 # genomics_utils
 
-fillID
-------
+Gene Name to ID
+---------------
 
 fillID.py: given a column of gene names, fills in a column of corresponding ensembl IDs.
 
@@ -29,8 +29,8 @@ python fillID.py geneTable.tsv Gene_Name Gene_ID
 | HULC       |  ENSG00000251164  |
 | HOTAIR     |  ENSG00000228630    |
 
-fillTR
-------
+Gene ID to Transcript ID
+------------------------
 
 fillTR.py: given a column of ensemble gene IDs, fills in a column of corresponding cononical transcript IDs.
 
