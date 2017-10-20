@@ -1,7 +1,7 @@
 # genomics_utils
 
 # Table of Contents
-- [gene2ID](#gene2ID)
+- [Gene Name to ID](#gene2ID)
 - [Gene ID to Transcript ID](#ID2TR)
 - [Process TCGA miRNASeq isoform quantifications](#miRNASeq)
 
@@ -33,10 +33,7 @@ python fillID.py geneTable.tsv Gene_Name Gene_ID
 | HULC       |  ENSG00000251164  |
 | HOTAIR     |  ENSG00000228630    |
 
-## ID2TR
-
-Gene ID to Transcript ID
-------------------------
+## Gene ID to Transcript ID
 
 fillTR.py: given a column of ensemble gene IDs, fills in a column of corresponding cononical transcript IDs.
 
@@ -61,10 +58,9 @@ python fillTR.py geneTable.tsv Gene_ID Transcript_ID
 | ENSG00000251164       |  ENST00000503668  |
 | ENSG00000228630     |  ENST00000414790    |
 
-## miRNASeq
 
-Process TCGA miRNASeq isoform quantifications
----------------------------------------------
+## Process TCGA miRNASeq isoform quantifications
+
 process_isoform_quantification.py: get mature miRNA sequence expression from a folder of TCGA miRNASeq isoform quantification files (in tsv format).
 
 Dependencies: glob, pandas, argparse, multiprocessing
