@@ -4,7 +4,7 @@
 - [Gene ID to Transcript ID](#id-to-tr)
 - [Process TCGA miRNASeq isoform quantifications](#mir-seq)
 
-## Convert Gene to ID
+## Gene to ID
 
 fillID.py: given a column of gene names, fills in a column of corresponding ensembl IDs.
 
