@@ -11,7 +11,7 @@ The script visualizes the kmer spectrum of the raw sequencing data to reveal pot
 Usage: Rscript kmer_plot.r <path to bbmap khist.sh> <path to fastq> <output file>
 ```
 
-![KSpectra](kplot.png?raw=true)
+![KSpectra](kmer_plot.png?raw=true)
 
 Sources:
 http://software.broadinstitute.org/allpaths-lg/blog/wp-content/uploads/2014/05/KmerSpectrumPrimer.pdf
