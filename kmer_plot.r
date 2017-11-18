@@ -19,7 +19,7 @@ if (length(args) < 2) {
 }
 
 # check if path to khist.sh is valid
-if (!('khist.sh' %in% path_to_khist)){
+if (!endsWith(path_to_khist, "khist.sh")){
   stop("Please provide valid path to khist.sh of bbmap")
 }
 
@@ -38,9 +38,9 @@ f <- list(
   size = 18,
   color = "black")
 
-# annotations
-a <- list(
-  text = "Unique kmer frquency distrbution",
+# plot titles
+title_left <- list(
+  text = "Count of unique kmers",
   font = f,
   xref = "paper",
   yref = "paper",
@@ -52,8 +52,8 @@ a <- list(
   showarrow = FALSE
 )
 
-b <- list(
-  text = "Cumulative fraction of read kmers",
+title_right <- list(
+  text = "Cumulative fraction of kmers",
   font = f,
   xref = "paper",
   yref = "paper",
@@ -66,11 +66,11 @@ b <- list(
 )
 
 # plot left panel
-p1 <- plot_ly(count_table, x = ~depth, y = ~unique_count, type = 'scatter', mode = 'lines+markers', name = "Unique kmers") %>% layout(annotations = a)
+p1 <- plot_ly(count_table, x = ~depth, y = ~unique_count, type = 'scatter', mode = 'lines+markers', name = "Unique kmers") %>% layout(annotations = title_left, xaxis = list(title = "kmer frequency"), yaxis = list(title = "# unique kmers"))
 
 # plot right panel
-p2 <- plot_ly(count_table, x = ~depth, y = ~cumsum(unique_count)/sum(unique_count), type = 'scatter', mode = 'lines+markers', name = "Cumulative kmers") %>% layout(xaxis = list(type = "log"), annotations = b)
+p2 <- plot_ly(count_table, x = ~depth, y = ~cumsum(unique_count)/sum(unique_count), type = 'scatter', mode = 'lines+markers', name = "Cumulative kmers") %>% layout(xaxis = list(type = "log", title = "kmer frequency"), yaxis = list(title = "cumulative fraction of kmers"), annotations = title_right)
 
 # save plot
-p <- subplot(p1, p2)
+p <- subplot(p1, p2, titleX = T, titleY = F)
 htmlwidgets::saveWidget(as_widget(p), out_file)
