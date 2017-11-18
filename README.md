@@ -5,6 +5,15 @@
 - [Process TCGA miRNASeq isoform quantifications](#process-tcga-mirnaseq-isoform-quantifications)
 
 ## Kmer Diagnostics of De Novo Genome Assembly
+The script visualizes kmer frequency distribution in the raw sequencing data to reveal potential QC problems such as sequencing bias, sequencing error rate, and contamination.
+
+```
+Usage: Rscript kmer_plot.r <path to bbmap khist.sh> <path to fastq> <output file>
+```
+
+Sources:
+http://software.broadinstitute.org/allpaths-lg/blog/wp-content/uploads/2014/05/KmerSpectrumPrimer.pdf
+https://jgi.doe.gov/data-and-tools/bbtools/bb-tools-user-guide/bbnorm-guide/
 
 ## Gene to ID
 
