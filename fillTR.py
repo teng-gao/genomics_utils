@@ -1,4 +1,4 @@
-import sys, re, pandas, biomart
+import re, pandas, biomart
 import argparse
 from multiprocessing import Pool
 from collections import defaultdict
@@ -27,6 +27,9 @@ def bioMartBestTR(gene_ID):
       ]
     })
 
+    if not response.text:
+        return 'nan'
+
     TRs = response.text.rstrip('\n').split('\n')
 
     response = ensembl.search({
@@ -37,6 +40,9 @@ def bioMartBestTR(gene_ID):
           'ensembl_transcript_id', 'transcript_tsl'
       ]
     })
+
+    if not response.text:
+        return 'nan'
 
     TSLs = [item.split('\t') for item in response.text.rstrip('\n').split('\n')]
     TSL_dict = dict([(TSL[0],int(TSL[1][3])) if TSL[1] != 'tslNA' else (TSL[0],6) for TSL in TSLs])
