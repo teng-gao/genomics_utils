@@ -1,6 +1,5 @@
 #!/usr/bin/env Rscript
 suppressMessages(library(plotly))
-# Rscript kmer_plot.r ~/bbmap/khist.sh /Users/gaoteng/genome_assembly_data/toy.fastq kplot.html kmer_hist.txt
 
 # Usage
 usage = "Usage\nRscript kmer_plot.r <path to bbmap khist.sh> <path to fastq> <output file> < (optional) existing kmer count table>"
