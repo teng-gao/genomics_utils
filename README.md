@@ -1,5 +1,5 @@
 # genomics_utils
-- [Kmer Diagnostics of De Novo Genome Assembly](#Kmer-Diagnostics-of-De-Novo-Genome-Assembly)
+- [Kmer Diagnostics of De Novo Genome Assembly](#kmer-diagnostics-of-de-novo-genome-assembly)
 - [Gene Name to ID](#gene-to-id)
 - [Gene ID to Transcript ID](#id-to-transcript)
 - [Process TCGA miRNASeq isoform quantifications](#process-tcga-mirnaseq-isoform-quantifications)
