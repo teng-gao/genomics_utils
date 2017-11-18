@@ -1,8 +1,10 @@
 # genomics_utils
-
+- [Kmer Diagnostics of De Novo Genome Assembly](#Kmer-Diagnostics-of-De-Novo-Genome-Assembly)
 - [Gene Name to ID](#gene-to-id)
 - [Gene ID to Transcript ID](#id-to-transcript)
 - [Process TCGA miRNASeq isoform quantifications](#process-tcga-mirnaseq-isoform-quantifications)
+
+## Kmer Diagnostics of De Novo Genome Assembly
 
 ## Gene to ID
 
@@ -97,4 +99,3 @@ python process_isoform_quantification.py
 |MIMAT0000068|347|193|213|
 |MIMAT0000069|625|543|713|
 |MIMAT0000070|870|839|1354|
-
