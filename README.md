@@ -7,7 +7,7 @@
 ## Kmer Diagnostics of De Novo Genome Assembly
 The script visualizes the kmer spectrum of the raw sequencing data to reveal potential QC problems such as sequencing bias, sequencing error rate, and contamination. It produces two interactive plots in a HTML file that can be opened by a browser such as Chrome.
 
-Dependencies: bbmap tools by JGI
+Dependencies: khist.sh included in bbmap by JGI
 https://sourceforge.net/projects/bbmap/
 
 ```
