@@ -69,7 +69,7 @@ title_right <- list(
 p1 <- plot_ly(count_table, x = ~depth, y = ~unique_count, type = 'scatter', mode = 'lines+markers', name = "Unique kmers") %>% layout(annotations = title_left, xaxis = list(title = "kmer frequency"), yaxis = list(title = "# unique kmers"))
 
 # plot right panel
-p2 <- plot_ly(count_table, x = ~depth, y = ~cumsum(unique_count)/sum(unique_count), type = 'scatter', mode = 'lines+markers', name = "Cumulative kmers") %>% layout(xaxis = list(type = "log", title = "kmer frequency"), yaxis = list(title = "cumulative fraction of kmers"), annotations = title_right)
+p2 <- plot_ly(count_table, x = ~depth, y = ~cumsum(unique_count)/sum(unique_count), type = 'scatter', mode = 'lines+markers', name = "Cumulative kmers") %>% layout(xaxis = list(type = "log", title = "kmer frequency"), yaxis = list(title = "cumulative fraction of kmers", range = c(0,1)), annotations = title_right)
 
 # save plot
 p <- subplot(p1, p2, titleX = T, titleY = F)
