@@ -9,7 +9,8 @@ parser.add_argument('nameCol', type=str,
                     help='column name of gene names')
 parser.add_argument('IDCol', type=str,
                     help='ID column that needs to be filled in')
-
+parser.add_argument('sep', type=str,
+                    help='Delimiter')
 
 if __name__ == '__main__':
     args = parser.parse_args()
@@ -17,14 +18,15 @@ if __name__ == '__main__':
     inFile = args.inFile
     nameCol = args.nameCol
     IDCol = args.IDCol
+    sep = args.sep
     # set up ensembl server
     server = biomart.BiomartServer( "http://useast.ensembl.org/biomart" )
     ensembl = server.datasets['hsapiens_gene_ensembl']
     # read in table
-    table = pandas.read_csv(inFile)
+    table = pandas.read_csv(inFile, sep = sep)
     table[IDCol] = table[IDCol].astype(str)
     # get list of genes that need to be filled in
-    gene_list = list(set([name.upper() for name in table.loc[table[IDCol].isin(['NaN', 'nan', ''])][nameCol].tolist()]))
+    gene_list = list(set([str(name).upper() for name in table.loc[table[IDCol].isin(['NaN', 'nan', ''])][nameCol].tolist()]))
     # query ensembl for ID
     response = ensembl.search({
       'filters': {
@@ -40,11 +42,11 @@ if __name__ == '__main__':
         id_dict = dict([id.split('\t') for id in id_list])
         # fill in empty cells with ID
         for i in range(table.shape[0]):
-            geneName = table[nameCol][i].upper()
+            geneName = str(table[nameCol][i]).upper()
             table.at[i,nameCol] = geneName
             if geneName in id_dict.keys():
                 table.at[i,IDCol] = id_dict[geneName]
         # overwrite old table
-        table.to_csv(inFile, index = False)
+        table.to_csv(inFile, index = False, sep = sep)
     else:
         print("Nothing I can fill!")
