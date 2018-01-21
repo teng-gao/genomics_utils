@@ -29,7 +29,7 @@ Usage: python fillID.py <File name> <Column name of gene names> <Column name of 
 
 Dependencies: biomart, pandas, argparse
 
-Example: geneTable.tsv
+Example: geneTable.csv
 
 | Gene_Name     | Gene_ID        |
 | ------------- |:-------------:|
@@ -58,7 +58,7 @@ Usage: python fillTR.py <File name> <Column name of gene IDs> <Column name of tr
 
 Dependencies: biomart, pandas, argparse, multiprocessing, collections, re
 
-Example: geneTable.tsv
+Example: geneTable.csv
 
 | Gene_ID     | Transcript_ID   |
 | ------------- |:-------------:|
