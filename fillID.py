@@ -9,8 +9,6 @@ parser.add_argument('nameCol', type=str,
                     help='column name of gene names')
 parser.add_argument('IDCol', type=str,
                     help='ID column that needs to be filled in')
-parser.add_argument('sep', type=str,
-                    help='Delimiter')
 
 if __name__ == '__main__':
     args = parser.parse_args()
@@ -18,7 +16,8 @@ if __name__ == '__main__':
     inFile = args.inFile
     nameCol = args.nameCol
     IDCol = args.IDCol
-    sep = args.sep
+    sep = ','
+
     # set up ensembl server
     server = biomart.BiomartServer( "http://useast.ensembl.org/biomart" )
     ensembl = server.datasets['hsapiens_gene_ensembl']
@@ -47,6 +46,6 @@ if __name__ == '__main__':
             if geneName in id_dict.keys():
                 table.at[i,IDCol] = id_dict[geneName]
         # overwrite old table
-        table.to_csv(inFile, index = False, sep = sep)
+        table.to_csv(inFile, index = False, sep = ',')
     else:
         print("Nothing I can fill!")
